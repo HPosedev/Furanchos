@@ -6,14 +6,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hposedev.furanchos.Furancho
 import com.hposedev.furanchos.R
+import com.hposedev.furanchos.databinding.ItemFuranchoBinding
+
 
 class FuranchoViewHolder(view:View) : RecyclerView.ViewHolder(view){
 
-    val nameFurancho = view.findViewById<TextView>(R.id.textViewFurancho)
-    val imageFurancho = view.findViewById<ImageView>(R.id.imageViewFurancho)
+    val binding = ItemFuranchoBinding.bind(view)
+
 
     fun render(furancho: Furancho){
-        nameFurancho.text = furancho.nombre
-        imageFurancho.drawable
+        binding.textViewFurancho.text = furancho.nombre
+        binding.imageViewFurancho.setImageResource(furancho.imagen)
     }
+}
+
+private fun ImageView.setImageResource(imageFurancho: ImageView?) {
+
 }
