@@ -14,7 +14,8 @@ class FuranchoAdapter (val furanchoList: List<Furancho>): RecyclerView.Adapter<F
     }
 
     override fun onBindViewHolder(holder: FuranchoViewHolder, position: Int) {
-
+        val item = furanchoList[position]
+        holder.render(item)
     }
 
     override fun getItemCount(): Int = furanchoList.size
