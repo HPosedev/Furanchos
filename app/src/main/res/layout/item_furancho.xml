@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imageViewFurancho"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/textViewFuraancho"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        tools:text="O Furancho de Ramon"
+        android:textAlignment="center"
+        android:shadowDy="@integer/material_motion_duration_long_1"
+        android:textAppearance="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFurancho"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/teal_700"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
