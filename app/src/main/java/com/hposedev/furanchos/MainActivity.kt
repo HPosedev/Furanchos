@@ -16,9 +16,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         initRecyclerView()
     }
-    fun initRecyclerView(){
+    private fun initRecyclerView(){
 
         binding.recyclerFurancho.layoutManager = LinearLayoutManager(this)
         binding.recyclerFurancho.adapter = FuranchoAdapter(ListaFuranchos.listaFuranchos)
+        {furancho -> onItemSelected(furancho)}
+    }
+
+    fun onItemSelected(furancho: Furancho){
+
     }
 }

@@ -1,12 +1,16 @@
 package com.hposedev.furanchos.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hposedev.furanchos.Furancho
 import com.hposedev.furanchos.R
 
-class FuranchoAdapter (val furanchoList: List<Furancho>): RecyclerView.Adapter<FuranchoViewHolder>() {
+class FuranchoAdapter(
+    val furanchoList: List<Furancho>,
+    private val onClickListener: (Furancho) ->
+    Unit) : RecyclerView.Adapter<FuranchoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FuranchoViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -15,7 +19,7 @@ class FuranchoAdapter (val furanchoList: List<Furancho>): RecyclerView.Adapter<F
 
     override fun onBindViewHolder(holder: FuranchoViewHolder, position: Int) {
         val item = furanchoList[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 
     override fun getItemCount(): Int = furanchoList.size
