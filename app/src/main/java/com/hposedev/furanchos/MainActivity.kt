@@ -1,5 +1,6 @@
 package com.hposedev.furanchos
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onItemSelected(furancho: Furancho){
-        Toast.makeText(applicationContext, furancho.nombre, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("nombre", furancho.nombre)
+        intent.putExtra("direccion", furancho.direccion)
+        intent.putExtra("imagen", furancho.imagen)
+        startActivity(intent)
     }
 }

@@ -12,5 +12,19 @@ class DetailActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DetailActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        getData()
+
+
+    }
+
+    private fun getData() {
+        val bundle = intent.extras
+        val name = bundle?.get("nombre")
+        val direccion = bundle?.get("direccion")
+        val imagen = bundle?.get("imagen")
+
+        binding.tvNombre.text = name.toString()
+        binding.tvDireccion.text = direccion.toString()
+        binding.ivDetail.setImageResource(imagen as Int)
     }
 }
