@@ -2,8 +2,7 @@ package com.hposedev.furanchos
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.hposedev.furanchos.adapter.FuranchoAdapter
 import com.hposedev.furanchos.databinding.ActivityMainBinding
 
@@ -17,12 +16,13 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
     }
     private fun initRecyclerView(){
-        val manager = LinearLayoutManager(this)
-        val decoration = DividerItemDecoration(this, manager.orientation)
-        binding.recyclerFurancho.layoutManager = LinearLayoutManager(this)
+        val manager = GridLayoutManager(this, 2)
+
+        binding.recyclerFurancho.layoutManager = manager
         binding.recyclerFurancho.adapter = FuranchoAdapter(ListaFuranchos.listaFuranchos)
         {furancho -> onItemSelected(furancho)}
-        binding.recyclerFurancho.addItemDecoration(decoration)
+
+
     }
 
     fun onItemSelected(furancho: Furancho){
