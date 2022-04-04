@@ -5,10 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     app:cardCornerRadius="8dp"
-    app:cardUseCompatPadding="true"
-    android:paddingLeft="24dp"
-    android:paddingStart="24dp"
-    android:paddingTop="8dp">
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -27,7 +24,7 @@
             android:id="@+id/textViewFurancho"
             android:layout_width="180dp"
             android:layout_height="30dp"
-            android:background="@color/teal_700"
+            android:background="@color/design_default_color_secondary"
             android:paddingTop="4dp"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
