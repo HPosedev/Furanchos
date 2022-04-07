@@ -26,7 +26,6 @@
             android:background="@color/design_default_color_secondary"
             android:paddingTop="4dp"
             android:textAlignment="center"
-            android:paddingRight="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewFurancho"
             tools:text="O Furancho de Ramon" />

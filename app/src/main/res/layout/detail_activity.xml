@@ -24,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/ivDetail"
+            android:paddingTop="20dp"/>
 
         <TextView
             android:id="@+id/tvDireccion"
