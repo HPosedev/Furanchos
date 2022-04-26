@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.action_settings -> {
+        R.id.settings -> {
             // User chose the "Settings" item, show the app settings UI...
             true
         }
