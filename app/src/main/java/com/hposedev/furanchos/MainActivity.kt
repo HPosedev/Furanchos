@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.hposedev.furanchos.adapter.FuranchoAdapter
@@ -33,9 +32,10 @@ class MainActivity : AppCompatActivity() {
 
     fun onItemSelected(furancho: Furancho){
         val intent = Intent(this, DetailActivity::class.java)
-        intent.putExtra("nombre", furancho.nombre)
-        intent.putExtra("direccion", furancho.direccion)
-        intent.putExtra("imagen", furancho.imagen)
+        intent.putExtra("name", furancho.name)
+        intent.putExtra("adress", furancho.adress)
+        intent.putExtra("description", furancho.description)
+        intent.putExtra("image", furancho.image)
         startActivity(intent)
     }
 

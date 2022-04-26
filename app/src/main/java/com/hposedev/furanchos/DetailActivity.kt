@@ -19,12 +19,14 @@ class DetailActivity: AppCompatActivity() {
 
     private fun getData() {
         val bundle = intent.extras
-        val name = bundle?.get("nombre")
-        val direccion = bundle?.get("direccion")
-        val imagen = bundle?.get("imagen")
+        val name = bundle?.get("name")
+        val adress = bundle?.get("adress")
+        val description = bundle?.get("description")
+        val image = bundle?.get("image")
 
-        binding.tvNombre.text = name.toString()
-        binding.tvDireccion.text = direccion.toString()
-        binding.ivDetail.setImageResource(imagen as Int)
+        binding.tvName.text = name.toString()
+        binding.tvAdress.text = adress.toString()
+        binding.tvDescription.text = description.toString()
+        binding.ivDetail.setImageResource(image as Int)
     }
 }
