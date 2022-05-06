@@ -2,6 +2,9 @@ package com.hposedev.furanchos
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.hposedev.furanchos.databinding.DetailActivityBinding
 
 class DetailActivity: AppCompatActivity() {
@@ -23,10 +26,15 @@ class DetailActivity: AppCompatActivity() {
         val adress = bundle?.get("adress")
         val description = bundle?.get("description")
         val image = bundle?.get("image")
-
+        val imageList = ArrayList<SlideModel>()
+        imageList.add(SlideModel(R.drawable.a_de_juan, ScaleTypes.CENTER_CROP))
+        imageList.add(SlideModel(R.drawable.fogar_do_santiso, ScaleTypes.CENTER_CROP))
+        imageList.add(SlideModel(R.drawable.furancho_a_de_marcos_, ScaleTypes.CENTER_CROP))
+        val imageSlider = findViewById<ImageSlider>(R.id.image_slider)
+        imageSlider.setImageList(imageList)
         binding.tvName.text = name.toString()
         binding.tvAdress.text = adress.toString()
         binding.tvDescription.text = description.toString()
-        binding.ivDetail.setImageResource(image as Int)
+
     }
 }
