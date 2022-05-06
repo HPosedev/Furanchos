@@ -26,6 +26,7 @@ class DetailActivity: AppCompatActivity() {
         val adress = bundle?.get("adress")
         val description = bundle?.get("description")
         val image = bundle?.get("image") as List<Int>
+        val open = bundle?.get("open")
         val imageList = ArrayList<SlideModel>()
         for (i in image) {
             imageList.add(SlideModel(i, ScaleTypes.CENTER_CROP))
@@ -35,6 +36,7 @@ class DetailActivity: AppCompatActivity() {
         binding.tvName.text = name.toString()
         binding.tvAdress.text = adress.toString()
         binding.tvDescription.text = description.toString()
+        binding.tvOpeningHours.text = open.toString()
 
     }
 }

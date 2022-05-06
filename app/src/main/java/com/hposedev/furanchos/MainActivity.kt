@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("adress", furancho.adress)
         intent.putExtra("description", furancho.description)
         intent.putExtra("image", furancho.image as Serializable)
+        intent.putExtra("open", furancho.openingHours)
         startActivity(intent)
     }
 
