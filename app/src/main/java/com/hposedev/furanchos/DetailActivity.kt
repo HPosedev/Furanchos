@@ -25,11 +25,11 @@ class DetailActivity: AppCompatActivity() {
         val name = bundle?.get("name")
         val adress = bundle?.get("adress")
         val description = bundle?.get("description")
-        val image = bundle?.get("image")
+        val image = bundle?.get("image") as List<Int>
         val imageList = ArrayList<SlideModel>()
-        imageList.add(SlideModel(R.drawable.a_de_juan, ScaleTypes.CENTER_CROP))
-        imageList.add(SlideModel(R.drawable.fogar_do_santiso, ScaleTypes.CENTER_CROP))
-        imageList.add(SlideModel(R.drawable.furancho_a_de_marcos_, ScaleTypes.CENTER_CROP))
+        for (i in image) {
+            imageList.add(SlideModel(i, ScaleTypes.CENTER_CROP))
+        }
         val imageSlider = findViewById<ImageSlider>(R.id.image_slider)
         imageSlider.setImageList(imageList)
         binding.tvName.text = name.toString()

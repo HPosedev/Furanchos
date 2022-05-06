@@ -14,7 +14,7 @@ class FuranchoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun render(furancho: Furancho, onClickListener: (Furancho) ->
     Unit) {
         binding.textViewFurancho.text = furancho.name
-        binding.imageViewFurancho.setImageResource(furancho.image)
+        binding.imageViewFurancho.setImageResource(furancho.image[0])
         binding.imageViewFurancho.setOnClickListener { onClickListener(furancho) }
     }
 }

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.hposedev.furanchos.adapter.FuranchoAdapter
 import com.hposedev.furanchos.databinding.ActivityMainBinding
+import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("name", furancho.name)
         intent.putExtra("adress", furancho.adress)
         intent.putExtra("description", furancho.description)
-        intent.putExtra("image", furancho.image)
+        intent.putExtra("image", furancho.image as Serializable)
         startActivity(intent)
     }
 
