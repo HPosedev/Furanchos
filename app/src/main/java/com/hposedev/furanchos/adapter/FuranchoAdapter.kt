@@ -1,10 +1,9 @@
 package com.hposedev.furanchos.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.hposedev.furanchos.Furancho
+import com.hposedev.furanchos.model.Furancho
 import com.hposedev.furanchos.R
 
 class FuranchoAdapter(

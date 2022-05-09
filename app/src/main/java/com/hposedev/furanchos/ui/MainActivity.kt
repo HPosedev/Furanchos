@@ -1,4 +1,4 @@
-package com.hposedev.furanchos
+package com.hposedev.furanchos.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,11 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.hposedev.furanchos.ListaFuranchos
+import com.hposedev.furanchos.R
 import com.hposedev.furanchos.adapter.FuranchoAdapter
 import com.hposedev.furanchos.databinding.ActivityMainBinding
+import com.hposedev.furanchos.model.Furancho
 import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {

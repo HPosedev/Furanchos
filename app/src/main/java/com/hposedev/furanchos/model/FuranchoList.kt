@@ -1,5 +1,7 @@
 package com.hposedev.furanchos
 
+import com.hposedev.furanchos.model.Furancho
+
 class ListaFuranchos {
     companion object {
         val listaFuranchos = listOf(
